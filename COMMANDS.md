@@ -1,93 +1,53 @@
 # Hhf Commands
 
-هذا الملف مرجع سريع لجميع أوامر Hhf، مع صورة توضح شكل استخدام الأوامر وردود البوت.
+هذا الملف يشرح **كل الأوامر اليدوية الموجودة في Hhf** بصريًا: كل بطاقة تعرض الأمر كما يكتبه المستخدم ثم مثالًا لشكل رد البوت.
 
-![Hhf Command Examples](docs/command-examples.svg)
+## 🖼️ الصور التوضيحية
 
-## 📌 الأوامر العامة — Member
+### الأوامر العامة + الإدارة
+![Hhf General and Moderation](docs/commands-general.svg)
 
-| الأمر | الاستخدام |
-|---|---|
-| `!help` | فتح مركز المساعدة |
-| `!ping` | فحص استجابة البوت |
-| `!uptime` | مدة تشغيل البوت |
-| `!botinfo` | معلومات البوت |
-| `!server` | معلومات السيرفر |
-| `!userinfo [@عضو]` | معلومات عضو |
-| `!avatar [@عضو]` | صورة عضو |
-| `!rolelist` | قائمة الرتب |
-| `!channels` | قائمة الرومات |
-| `!icon` | أيقونة السيرفر |
-| `!serverstats` | إحصائيات السيرفر |
+### الإعدادات + الحماية + الصلاحيات
+![Hhf Security and Settings](docs/commands-security-settings.svg)
 
-## 🛡️ الإدارة — Moderator
+### التذاكر + الأدوات
+![Hhf Tickets and Tools](docs/commands-tools.svg)
 
-| الأمر | الاستخدام |
-|---|---|
-| `!clear <عدد>` | حذف رسائل |
-| `!kick @عضو [سبب]` | طرد عضو |
-| `!ban @عضو [سبب]` | حظر عضو |
-| `!unban <ID>` | فك الحظر |
-| `!timeout @عضو <دقائق> [سبب]` | تقييد عضو |
-| `!untimeout @عضو` | إزالة التقييد |
-| `!warn @عضو [سبب]` | تحذير عضو |
-| `!warnings [@عضو]` | عرض التحذيرات |
-| `!unwarn @عضو <رقم>` | إزالة تحذير |
-| `!lock` | قفل الروم |
-| `!unlock` | فتح الروم |
-| `!slowmode <ثواني>` | تفعيل Slowmode |
+### المستويات + الاقتصاد + الرتب
+![Hhf Levels Economy Roles](docs/commands-levels.svg)
 
-## 🔐 الحماية — Security
+## 📌 الأوامر العامة
+`!help` • `!ping` • `!uptime` • `!botinfo` • `!server` • `!userinfo [@عضو]` • `!avatar [@عضو]` • `!rolelist` • `!channels` • `!icon` • `!serverstats`
 
-| الأمر | الاستخدام |
-|---|---|
-| `!automod on/off` | تشغيل/إيقاف AutoMod |
-| `!antilink on/off` | تشغيل/إيقاف Anti-Link |
-| `!antispam on/off` | تشغيل/إيقاف Anti-Spam |
-| `!lockdown` | تفعيل إغلاق أمني |
-| `!unlockdown` | إلغاء الإغلاق الأمني |
-| `!protection` | عرض حالة الحماية |
+## 🛡️ الإدارة
+`!clear <عدد>` • `!kick @عضو [سبب]` • `!ban @عضو [سبب]` • `!unban <ID>` • `!timeout @عضو <دقائق> [سبب]` • `!untimeout @عضو` • `!warn @عضو [سبب]` • `!warnings [@عضو]` • `!unwarn @عضو <رقم>` • `!lock` • `!unlock` • `!slowmode <ثواني>`
+
+## 🔐 الحماية
+`!automod on/off` • `!antilink on/off` • `!antispam on/off` • `!lockdown` • `!unlockdown` • `!protection`
 
 ## 🎫 التذاكر
+`!ticket` • `!close`  
+داخل التذكرة يوجد أيضًا زر **إغلاق التذكرة**.
 
-| الأمر | الاستخدام |
-|---|---|
-| `!ticket` | إنشاء تذكرة دعم |
-| زر إغلاق التذكرة | إغلاق التذكرة |
-
-## ⚙️ الإعدادات — Admin
-
-| الأمر | الاستخدام |
-|---|---|
-| `!setlog #روم` | تحديد روم اللوق |
-| `!setwelcome #روم` | تحديد روم الترحيب |
-| `!welcome_msg <النص>` | تغيير رسالة الترحيب |
-| `!setsuggest #روم` | تحديد روم الاقتراحات |
-| `!setcategory #تصنيف` | تحديد تصنيف التذاكر |
-| `!config` | عرض إعدادات السيرفر |
-| `!setadminrole @Role` | تحديد رتبة Admin |
-| `!setmodrole @Role` | تحديد رتبة Moderator |
-| `!clearadminrole` | إلغاء رتبة Admin المخصصة |
-| `!clearmodrole` | إلغاء رتبة Moderator المخصصة |
-| `!roles` | عرض نظام الرتب |
+## ⚙️ الإعدادات والصلاحيات
+`!setlog #روم` • `!setwelcome #روم` • `!welcome_msg <النص>` • `!setsuggest #روم` • `!setcategory #تصنيف` • `!config` • `!setadminrole @Role` • `!setmodrole @Role` • `!clearadminrole` • `!clearmodrole` • `!roles`
 
 ## 🔧 الأدوات
+`!say <النص>` • `!announce <النص>` • `!poll <السؤال>` • `!suggest <الاقتراح>` • `!createchannel <الاسم>` • `!deletechannel`
 
-| الأمر | الاستخدام |
-|---|---|
-| `!say <النص>` | إرسال رسالة باسم البوت |
-| `!announce <النص>` | إرسال إعلان |
-| `!poll <السؤال>` | إنشاء تصويت |
-| `!suggest <الاقتراح>` | إرسال اقتراح |
-| `!createchannel <الاسم>` | إنشاء روم |
-| `!deletechannel` | حذف الروم |
+## 🏆 المستويات والاقتصاد والرتب
+`!rank [@عضو]` • `!balance [@عضو]` • `!daily` • `!work` • `!leaderboard` • `!autorole @Role` • `!autorole_off` • `!addrole @عضو @Role` • `!removerole @عضو @Role` • `!slowclear <عدد>` • `!membercount`
+
+## 🧩 الأوامر المولدة
+Hhf يحتوي أيضًا على **10,000 أمر مولد حقيقي** من `!cmd00001` إلى `!cmd10000`. كل واحد منها يعمل ويرسل Embed يوضح رقمه وتصنيفه وبيانات السيرفر.
+
+![Hhf All 10000 Commands](docs/mass-commands-10000.svg)
 
 ## 👑 مستويات الوصول
-
 - **Owner / Administrator:** أعلى مستوى وصول.
-- **Admin:** أوامر الإعدادات والإدارة المخصصة.
+- **Admin:** أوامر الإعدادات المخصصة.
 - **Moderator:** أوامر المودريشن.
 - **Member:** الأوامر العامة.
 - صلاحيات Discord الأصلية تبقى مطبقة أيضًا على الأوامر التي تتطلب صلاحيات Discord.
 
-> ملاحظة: الصورة أمثلة توضيحية لشكل التفاعل، وليست لقطة شاشة فعلية من Discord.
+> ملاحظة: الصور **تصاميم توضيحية** لشكل التفاعل وليست لقطات شاشة فعلية من Discord.

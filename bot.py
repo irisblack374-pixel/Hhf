@@ -49,6 +49,7 @@ bot = commands.Bot(
 async def setup_hook():
     await setup_security(bot)
     await setup_protection(bot)
+    await setup_role_permissions(bot)
 
 spam_cache = defaultdict(lambda: deque(maxlen=12))
 
@@ -1208,9 +1209,6 @@ async def roles(ctx):
         "إذا لم تُعيّن الرتب، تبقى صلاحيات Discord الحالية هي الأساس."
     )
     await ctx.send(embed=embed("🔐 صلاحيات Hhf", text))
-
-await setup_role_permissions(bot)
-
 
 if not TOKEN:
     raise RuntimeError("DISCORD_TOKEN غير موجود في متغيرات البيئة.")

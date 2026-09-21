@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" rx="28" fill="#111214"/>
+<rect x="35" y="35" width="1130" height="690" rx="22" fill="#1a1b1f" stroke="#303238" stroke-width="2"/>
+<text x="70" y="95" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Hhf • Command Examples</text>
+<text x="70" y="128" fill="#9ca3af" font-family="Arial, sans-serif" font-size="18">أمثلة توضيحية لكيف يرسل العضو الأمر وكيف يرد البوت</text>
+
+<rect x="70" y="165" width="500" height="145" rx="16" fill="#202225"/>
+<text x="95" y="198" fill="#7289da" font-family="Arial, sans-serif" font-size="17" font-weight="700">👤 MEMBER</text>
+<text x="95" y="235" fill="#ffffff" font-family="monospace" font-size="22">!ping</text>
+<rect x="95" y="250" width="440" height="42" rx="9" fill="#2b2d31"/>
+<text x="112" y="278" fill="#d9dde3" font-family="Arial, sans-serif" font-size="18">Hhf → 🏓 Pong! 42ms</text>
+
+<rect x="630" y="165" width="500" height="145" rx="16" fill="#202225"/>
+<text x="655" y="198" fill="#57f287" font-family="Arial, sans-serif" font-size="17" font-weight="700">🛡️ MODERATOR</text>
+<text x="655" y="235" fill="#ffffff" font-family="monospace" font-size="22">!clear 10</text>
+<rect x="655" y="250" width="440" height="42" rx="9" fill="#2b2d31"/>
+<text x="672" y="278" fill="#d9dde3" font-family="Arial, sans-serif" font-size="18">Hhf → 🧹 تم حذف 10 رسائل</text>
+
+<rect x="70" y="335" width="500" height="145" rx="16" fill="#202225"/>
+<text x="95" y="368" fill="#faa61a" font-family="Arial, sans-serif" font-size="17" font-weight="700">🔨 MODERATION</text>
+<text x="95" y="405" fill="#ffffff" font-family="monospace" font-size="22">!warn @Member spam</text>
+<rect x="95" y="420" width="440" height="42" rx="9" fill="#2b2d31"/>
+<text x="112" y="448" fill="#d9dde3" font-family="Arial, sans-serif" font-size="17">Hhf → ⚠️ تم تحذير العضو</text>
+
+<rect x="630" y="335" width="500" height="145" rx="16" fill="#202225"/>
+<text x="655" y="368" fill="#ed4245" font-family="Arial, sans-serif" font-size="17" font-weight="700">🔐 SECURITY</text>
+<text x="655" y="405" fill="#ffffff" font-family="monospace" font-size="22">!lockdown</text>
+<rect x="655" y="420" width="440" height="42" rx="9" fill="#2b2d31"/>
+<text x="672" y="448" fill="#d9dde3" font-family="Arial, sans-serif" font-size="17">Hhf → 🔒 تم تفعيل الإغلاق الأمني</text>
+
+<rect x="70" y="505" width="1060" height="165" rx="16" fill="#202225"/>
+<text x="95" y="540" fill="#b9a7ff" font-family="Arial, sans-serif" font-size="17" font-weight="700">⚙️ ROLE PERMISSIONS</text>
+<text x="95" y="580" fill="#ffffff" font-family="Arial, sans-serif" font-size="20">!setadminrole @Admin     →     تعيين رتبة الإدارة</text>
+<text x="95" y="615" fill="#ffffff" font-family="Arial, sans-serif" font-size="20">!setmodrole @Moderator   →     تعيين رتبة المودريتور</text>
+<text x="95" y="650" fill="#9ca3af" font-family="Arial, sans-serif" font-size="18">Member = عامة   •   Moderator = مودريشن   •   Admin = إعدادات   •   Owner = أعلى وصول</text>
+</svg>

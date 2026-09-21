@@ -12,6 +12,7 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from security import setup_security
 from protection import setup_protection
+from role_permissions import setup_role_permissions, RolePermissionError
 
 load_dotenv()
 
@@ -48,6 +49,7 @@ bot = commands.Bot(
 async def setup_hook():
     await setup_security(bot)
     await setup_protection(bot)
+    await setup_role_permissions(bot)
 
 spam_cache = defaultdict(lambda: deque(maxlen=12))
 
@@ -85,6 +87,8 @@ def cfg(guild):
             "automod": True,
             "antilink": False,
             "antispam": True,
+            "admin_role": 0,
+            "moderator_role": 0,
         }
         save_json(CONFIG_FILE, configs)
     return configs[gid]
@@ -126,6 +130,15 @@ async def log(guild, title, description, color=None):
         await channel.send(embed=embed(title, description[:4000], color))
     except (discord.Forbidden, discord.HTTPException):
         pass
+
+
+# Expose shared helpers to security/protection/permission modules.
+bot.cfg = cfg
+bot.save_json = save_json
+bot.CONFIG_FILE = CONFIG_FILE
+bot.configs = configs
+bot.embed = embed
+bot.log = log
 
 
 def ticket_owner(guild, channel_id):
@@ -1121,6 +1134,10 @@ async def on_command_error(ctx, exc):
     if isinstance(exc, commands.CommandNotFound):
         return
 
+    if isinstance(exc, RolePermissionError):
+        role_name = "الإدارة" if exc.level == "admin" else "المودريتور"
+        return await error(ctx, f"هذا الأمر مخصص لرتبة {role_name} أو أعلى.")
+
     if isinstance(exc, commands.MissingPermissions):
         return await error(ctx, "لا تملك صلاحية استخدام هذا الأمر.")
 
@@ -1149,6 +1166,49 @@ async def on_command_error(ctx, exc):
     except discord.HTTPException:
         pass
 
+
+@bot.command(name="setadminrole")
+@commands.has_permissions(administrator=True)
+async def setadminrole(ctx, role: discord.Role):
+    cfg(ctx.guild)["admin_role"] = role.id
+    save_json(CONFIG_FILE, configs)
+    await ok(ctx, f"تم تعيين {role.mention} كرتبة الإدارة.")
+
+@bot.command(name="setmodrole")
+@commands.has_permissions(administrator=True)
+async def setmodrole(ctx, role: discord.Role):
+    cfg(ctx.guild)["moderator_role"] = role.id
+    save_json(CONFIG_FILE, configs)
+    await ok(ctx, f"تم تعيين {role.mention} كرتبة المودريتور.")
+
+@bot.command(name="clearadminrole")
+@commands.has_permissions(administrator=True)
+async def clearadminrole(ctx):
+    cfg(ctx.guild)["admin_role"] = 0
+    save_json(CONFIG_FILE, configs)
+    await ok(ctx, "تم إلغاء رتبة الإدارة المخصصة.")
+
+@bot.command(name="clearmodrole")
+@commands.has_permissions(administrator=True)
+async def clearmodrole(ctx):
+    cfg(ctx.guild)["moderator_role"] = 0
+    save_json(CONFIG_FILE, configs)
+    await ok(ctx, "تم إلغاء رتبة المودريتور المخصصة.")
+
+@bot.command(name="roles")
+async def roles(ctx):
+    settings = cfg(ctx.guild)
+    admin_id = int(settings.get("admin_role", 0) or 0)
+    mod_id = int(settings.get("moderator_role", 0) or 0)
+    admin = ctx.guild.get_role(admin_id) if admin_id else None
+    mod = ctx.guild.get_role(mod_id) if mod_id else None
+    text = (
+        f"👑 Owner: مالك السيرفر\n"
+        f"🛡️ Admin: {admin.mention if admin else 'غير معين'}\n"
+        f"🔨 Moderator: {mod.mention if mod else 'غير معين'}\n\n"
+        "إذا لم تُعيّن الرتب، تبقى صلاحيات Discord الحالية هي الأساس."
+    )
+    await ctx.send(embed=embed("🔐 صلاحيات Hhf", text))
 
 if not TOKEN:
     raise RuntimeError("DISCORD_TOKEN غير موجود في متغيرات البيئة.")

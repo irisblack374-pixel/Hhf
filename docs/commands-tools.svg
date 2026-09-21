@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1309" viewBox="0 0 1200 1309">
+ <rect width="1200" height="1309" fill="#0b0d12"/><style>
+ .title{font:700 32px Arial;fill:#fff}.sub{font:16px Arial;fill:#9aa3b2}.cat{font:700 22px Arial;fill:#9aa3b2}
+ .card{fill:#151922;stroke:#303746}.cmd{font:700 18px monospace;fill:#fff}.res{font:16px Arial;fill:#cbd5e1}
+ </style><text x="60" y="58" class="title">Hhf • شرح الأوامر بصريًا</text>
+ <text x="60" y="90" class="sub">التذاكر والأدوات — كل بطاقة تعرض الأمر ثم مثال رد البوت.</text>
+ <text x="60" y="150" class="cat">التذاكر والأدوات</text>
+<rect x="60" y="195" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="225" class="cmd">!ticket</text>
+<text x="85" y="251" class="res">Hhf → 🎫 تم إنشاء تذكرة</text>
+<rect x="60" y="283" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="313" class="cmd">!close</text>
+<text x="85" y="339" class="res">Hhf → 🔒 سيتم إغلاق التذكرة</text>
+<rect x="60" y="371" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="401" class="cmd">!suggest اقتراح</text>
+<text x="85" y="427" class="res">Hhf → 💡 تم إرسال الاقتراح</text>
+<rect x="60" y="459" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="489" class="cmd">!say مرحبًا</text>
+<text x="85" y="515" class="res">Hhf → 💬 يرسل البوت النص</text>
+<rect x="60" y="547" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="577" class="cmd">!announce خبر مهم</text>
+<text x="85" y="603" class="res">Hhf → 📢 إعلان Hhf</text>
+<rect x="60" y="635" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="665" class="cmd">!poll هل نبدأ؟</text>
+<text x="85" y="691" class="res">Hhf → 📊 استفتاء مع تفاعلات</text>
+<rect x="60" y="723" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="753" class="cmd">!createchannel general</text>
+<text x="85" y="779" class="res">Hhf → ➕ تم إنشاء الروم</text>
+<rect x="60" y="811" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="841" class="cmd">!deletechannel</text>
+<text x="85" y="867" class="res">Hhf → 🗑️ تم حذف الروم</text>
+<rect x="60" y="899" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="929" class="cmd">!rolelist</text>
+<text x="85" y="955" class="res">Hhf → 🎭 قائمة الرتب</text>
+<rect x="60" y="987" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="1017" class="cmd">!channels</text>
+<text x="85" y="1043" class="res">Hhf → 💬 قائمة الرومات</text>
+<rect x="60" y="1075" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="1105" class="cmd">!icon</text>
+<text x="85" y="1131" class="res">Hhf → 🖼️ أيقونة السيرفر</text>
+<rect x="60" y="1163" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="1193" class="cmd">!serverstats</text>
+<text x="85" y="1219" class="res">Hhf → 📊 إحصائيات السيرفر</text></svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1221" viewBox="0 0 1200 1221">
+ <rect width="1200" height="1221" fill="#0b0d12"/><style>
+ .title{font:700 32px Arial;fill:#fff}.sub{font:16px Arial;fill:#9aa3b2}.cat{font:700 22px Arial;fill:#9aa3b2}
+ .card{fill:#151922;stroke:#303746}.cmd{font:700 18px monospace;fill:#fff}.res{font:16px Arial;fill:#cbd5e1}
+ </style><text x="60" y="58" class="title">Hhf • شرح الأوامر بصريًا</text>
+ <text x="60" y="90" class="sub">المستويات والاقتصاد والرتب — كل بطاقة تعرض الأمر ثم مثال رد البوت.</text>
+ <text x="60" y="150" class="cat">المستويات والاقتصاد والرتب</text>
+<rect x="60" y="195" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="225" class="cmd">!rank @Member</text>
+<text x="85" y="251" class="res">Hhf → 🏆 Rank • المستوى والتقدم</text>
+<rect x="60" y="283" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="313" class="cmd">!balance @Member</text>
+<text x="85" y="339" class="res">Hhf → 💰 الرصيد</text>
+<rect x="60" y="371" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="401" class="cmd">!daily</text>
+<text x="85" y="427" class="res">Hhf → 🎁 المكافأة اليومية</text>
+<rect x="60" y="459" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="489" class="cmd">!work</text>
+<text x="85" y="515" class="res">Hhf → 💼 مكافأة العمل</text>
+<rect x="60" y="547" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="577" class="cmd">!leaderboard</text>
+<text x="85" y="603" class="res">Hhf → 🏆 لوحة المتصدرين</text>
+<rect x="60" y="635" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="665" class="cmd">!autorole @Role</text>
+<text x="85" y="691" class="res">Hhf → 🎭 تم تفعيل الرتبة التلقائية</text>
+<rect x="60" y="723" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="753" class="cmd">!autorole_off</text>
+<text x="85" y="779" class="res">Hhf → 🛑 تم إيقاف الرتبة التلقائية</text>
+<rect x="60" y="811" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="841" class="cmd">!addrole @Member @Role</text>
+<text x="85" y="867" class="res">Hhf → ➕ تمت إضافة الرتبة</text>
+<rect x="60" y="899" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="929" class="cmd">!removerole @Member @Role</text>
+<text x="85" y="955" class="res">Hhf → ➖ تمت إزالة الرتبة</text>
+<rect x="60" y="987" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="1017" class="cmd">!slowclear 10</text>
+<text x="85" y="1043" class="res">Hhf → 🧹 تنظيف ببطء: 10</text>
+<rect x="60" y="1075" width="1080" height="72" rx="12" class="card"/>
+<text x="85" y="1105" class="cmd">!membercount</text>
+<text x="85" y="1131" class="res">Hhf → 👥 عدد الأعضاء</text></svg>

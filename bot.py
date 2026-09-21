@@ -12,7 +12,7 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from security import setup_security
 from protection import setup_protection
-from role_permissions import setup_role_permissions
+from role_permissions import setup_role_permissions, RolePermissionError
 
 load_dotenv()
 
@@ -129,6 +129,15 @@ async def log(guild, title, description, color=None):
         await channel.send(embed=embed(title, description[:4000], color))
     except (discord.Forbidden, discord.HTTPException):
         pass
+
+
+# Expose shared helpers to security/protection/permission modules.
+bot.cfg = cfg
+bot.save_json = save_json
+bot.CONFIG_FILE = CONFIG_FILE
+bot.configs = configs
+bot.embed = embed
+bot.log = log
 
 
 def ticket_owner(guild, channel_id):
@@ -1123,6 +1132,10 @@ async def config(ctx):
 async def on_command_error(ctx, exc):
     if isinstance(exc, commands.CommandNotFound):
         return
+
+    if isinstance(exc, RolePermissionError):
+        role_name = "الإدارة" if exc.level == "admin" else "المودريتور"
+        return await error(ctx, f"هذا الأمر مخصص لرتبة {role_name} أو أعلى.")
 
     if isinstance(exc, commands.MissingPermissions):
         return await error(ctx, "لا تملك صلاحية استخدام هذا الأمر.")

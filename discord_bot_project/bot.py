@@ -320,6 +320,16 @@ async def transfer_amount(ctx, amount: str):
     await ctx.send(embed=embed)
     await ctx.send(transfer_text)
 
+@bot.command(name="قيم")
+async def rate_command(ctx):
+    await ctx.send(
+        "شكرا لثقتك فينا<:LG236:1464269475078602814>\\n\\n"
+        "إذا كل شيء تمام معك والمنتج عجبك، لا تنسى تعطينا تقييمك ب خمس نجوم <a:yellowstar:1551498079675355189>  \\n"
+        "https://discord.com/channels/1380470925698273352/1401430709599473744\\n"
+        "تقييمك يفرق معنا كثير ويساعدنا \\n"
+        "نستمر ونقدم الأفضل <:I_42:1514777044372951121>"
+    )
+
 @bot.command(name="تعال")
 async def call_member(ctx, member: discord.Member):
     if not await admin_only(ctx):

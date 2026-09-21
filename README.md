@@ -1,26 +1,73 @@
-# Hhf
+<div align="center">
 
-بوت Discord متعدد الاستخدامات للإدارة والأدوات، مبني باستخدام Python وdiscord.py.
+# 🤖 Hhf
 
-## ✨ المميزات
+### A modular Discord utility & moderation bot built with Python
 
-- 🤖 نظام مساعدة وأوامر مرتب.
-- 🛡️ أوامر إدارة للسيرفر.
-- 🧹 حذف الرسائل.
-- 👢 طرد الأعضاء وحظرهم وفك الحظر.
-- 🔒 قفل وفتح الرومات.
-- 🐢 Slowmode.
-- 📢 إعلانات Embed.
-- 📊 تصويتات 👍 و👎.
-- 👤 معلومات الأعضاء والسيرفر.
-- 🖼️ عرض Avatar.
-- 🏓 Ping وقياس سرعة البوت.
-- ⏱️ معرفة مدة تشغيل البوت.
-- 🔐 التوكن محفوظ في متغيرات البيئة.
+<p>
+  <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/discord.py-2.x-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+  <img src="https://img.shields.io/github/license/irisblack374-pixel/Hhf?style=for-the-badge" />
+</p>
 
-## 📁 الملفات
+<p>
+  <a href="#-features">Features</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-configuration">Configuration</a> •
+  <a href="#-commands">Commands</a> •
+  <a href="#-security">Security</a>
+</p>
 
-```
+</div>
+
+---
+
+## 📌 Overview
+
+**Hhf** is a Discord bot focused on everyday server management, moderation, utilities, and interactive tools.
+
+The project is built with **Python + discord.py** and is designed around a simple environment-based configuration so the bot token stays outside the source code.
+
+---
+
+## ✨ Features
+
+### 🛡️ Moderation
+- 🧹 Message cleanup
+- 👢 Kick members
+- 🔨 Ban & unban members
+- 🔒 Lock & unlock channels
+- 🐢 Slowmode controls
+
+### 🧰 Utilities
+- 🏓 Bot ping / latency
+- ⏱️ Uptime
+- 👤 User information
+- 🖼️ Avatar display
+- 🏠 Server information
+
+### 📢 Community Tools
+- 📣 Embed announcements
+- 💬 Say messages
+- 📊 Reaction-based polls
+- ❓ Help system
+
+---
+
+## 🧱 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| 🐍 Python 3.11+ | Core language |
+| 💬 discord.py | Discord API library |
+| 🔐 python-dotenv | Environment configuration |
+| ☁️ Procfile | Hosting/startup configuration |
+
+---
+
+## 📂 Project Structure
+
+```text
 Hhf/
 ├── bot.py
 ├── requirements.txt
@@ -30,89 +77,138 @@ Hhf/
 └── README.md
 ```
 
-## 🛠️ المتطلبات
+---
 
-- Python 3.11 أو أحدث.
-- Bot Token من Discord Developer Portal.
-- تفعيل Message Content Intent.
-- تفعيل Server Members Intent إذا كنت تحتاج أوامر الأعضاء.
+## ⚡ Installation
 
-## ⚙️ إعداد التوكن
+### 1. Clone the repository
 
-لا تضع توكن البوت داخل GitHub.
-
-في الاستضافة أضف:
-
-```env
-DISCORD_TOKEN=ضع_توكن_البوت_هنا
-PREFIX=!
+```bash
+git clone https://github.com/irisblack374-pixel/Hhf.git
+cd Hhf
 ```
 
-## 🚀 التشغيل
-
-ثبّت المكتبات:
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-ثم شغّل:
+### 3. Configure environment variables
+
+Create a `.env` file based on `.env.example`:
+
+```env
+DISCORD_TOKEN=YOUR_BOT_TOKEN
+PREFIX=!
+```
+
+### 4. Start the bot
 
 ```bash
 python bot.py
 ```
 
-وعلى الاستضافات التي تدعم Procfile سيستخدم المشروع:
+---
 
-```
-worker: python3 bot.py
-```
+## 🔑 Discord Configuration
 
-## 📋 الأوامر
+Depending on the commands enabled in the bot, you may need to enable the required intents in the Discord Developer Portal.
 
-### 📌 عام
+For member-related functionality, enable the corresponding **Server Members Intent**.  
+For message-content based commands, enable **Message Content Intent**.
 
-```
+---
+
+## 📋 Commands
+
+### 📌 General
+
+```text
 !help
 !ping
 !server
-!userinfo [@عضو]
-!avatar [@عضو]
+!userinfo [@member]
+!avatar [@member]
 !uptime
 ```
 
-### 🛡️ الإدارة
+### 🛡️ Moderation
 
-```
-!clear <عدد>
-!kick @عضو [سبب]
-!ban @عضو [سبب]
+```text
+!clear <amount>
+!kick @member [reason]
+!ban @member [reason]
 !unban <ID>
 !lock
 !unlock
-!slowmode <ثواني>
+!slowmode <seconds>
 ```
 
-### 📢 الأدوات
+### 📢 Tools
 
+```text
+!say <message>
+!announce <message>
+!poll <question>
 ```
-!say <النص>
-!announce <النص>
-!poll <السؤال>
+
+> Moderation commands require the appropriate Discord permissions.
+
+---
+
+## 🔐 Security
+
+**Never commit your real Discord bot token.**
+
+Use environment variables instead:
+
+```env
+DISCORD_TOKEN=YOUR_BOT_TOKEN
 ```
 
-أوامر الإدارة تحتاج صلاحيات Discord المناسبة، مثل Manage Messages أو Kick Members أو Ban Members أو Manage Channels.
+If a token is ever exposed, rotate it immediately through the Discord Developer Portal.
 
-## 🔐 الأمان
+GitHub also recommends using repository security features such as secret scanning, push protection, and Dependabot where appropriate.
 
-- لا ترفع ملف `.env` إلى GitHub.
-- لا تكتب `DISCORD_TOKEN` داخل الكود.
-- استخدم متغيرات البيئة في الاستضافة.
-- إذا انكشف التوكن، قم بتغييره فورًا من Discord Developer Portal.
+---
 
-## 📄 الحقوق والترخيص
+## 🗺️ Roadmap
 
-© 2026 Hhf. All rights reserved.
+- [ ] Expand moderation tools
+- [ ] Add more utility commands
+- [ ] Improve error handling
+- [ ] Add automated tests
+- [ ] Improve command documentation
+- [ ] Add richer configuration options
 
-هذا المشروع مملوك لصاحب المشروع.  
-يُمنع نسخ المشروع أو إعادة نشره أو بيعه أو استخدامه كمشروع تجاري بدون إذن صاحب المشروع.
+---
+
+## 🤝 Contributing
+
+Suggestions and improvements are welcome.
+
+Before submitting changes:
+
+1. Keep the existing command behavior in mind.
+2. Test the bot locally.
+3. Never include secrets or tokens.
+4. Keep documentation updated when commands change.
+
+---
+
+## 📄 License
+
+© 2026 Hhf.
+
+See the repository's license information before redistributing or using the project commercially.
+
+---
+
+<div align="center">
+
+### 🚀 Built with Python & discord.py
+
+**Hhf — simple tools for better Discord servers.**
+
+</div>

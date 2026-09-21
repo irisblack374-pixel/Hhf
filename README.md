@@ -2,213 +2,230 @@
 
 # 🤖 Hhf
 
-### A modular Discord utility & moderation bot built with Python
+### 🛡️ Discord Moderation • 🧰 Utilities • 📢 Server Tools
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/discord.py-2.x-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
-  <img src="https://img.shields.io/github/license/irisblack374-pixel/Hhf?style=for-the-badge" />
 </p>
 
-<p>
-  <a href="#-features">Features</a> •
-  <a href="#-installation">Installation</a> •
-  <a href="#-configuration">Configuration</a> •
-  <a href="#-commands">Commands</a> •
-  <a href="#-security">Security</a>
-</p>
+**بوت Discord متعدد الاستخدامات لإدارة السيرفر وتوفير أدوات مفيدة للأعضاء والإدارة.**
 
 </div>
 
 ---
 
-## 📌 Overview
+## 👀 ما هو Hhf؟
 
-**Hhf** is a Discord bot focused on everyday server management, moderation, utilities, and interactive tools.
+**Hhf** هو بوت Discord مبني باستخدام **Python وdiscord.py**.
 
-The project is built with **Python + discord.py** and is designed around a simple environment-based configuration so the bot token stays outside the source code.
+فكرته ببساطة:
 
----
+> 🏠 **يساعدك في إدارة السيرفر + يوفر أوامر وأدوات للأعضاء.**
 
-## ✨ Features
-
-### 🛡️ Moderation
-- 🧹 Message cleanup
-- 👢 Kick members
-- 🔨 Ban & unban members
-- 🔒 Lock & unlock channels
-- 🐢 Slowmode controls
-
-### 🧰 Utilities
-- 🏓 Bot ping / latency
-- ⏱️ Uptime
-- 👤 User information
-- 🖼️ Avatar display
-- 🏠 Server information
-
-### 📢 Community Tools
-- 📣 Embed announcements
-- 💬 Say messages
-- 📊 Reaction-based polls
-- ❓ Help system
+بدل استخدام عدة بوتات لأشياء بسيطة، يجمع Hhf مجموعة من الأدوات في بوت واحد.
 
 ---
 
-## 🧱 Tech Stack
+## ✨ ماذا يستطيع البوت أن يفعل؟
 
-| Technology | Purpose |
+### 🛡️ 1. إدارة السيرفر
+
+| الأمر | ماذا يفعل؟ |
 |---|---|
-| 🐍 Python 3.11+ | Core language |
-| 💬 discord.py | Discord API library |
-| 🔐 python-dotenv | Environment configuration |
-| ☁️ Procfile | Hosting/startup configuration |
+| !clear | 🧹 يحذف عددًا من الرسائل |
+| !kick | 👢 يطرد عضوًا |
+| !ban | 🔨 يحظر عضوًا |
+| !unban | 🔓 يفك حظر عضو |
+| !lock | 🔒 يقفل الروم |
+| !unlock | 🔓 يفتح الروم |
+| !slowmode | 🐢 يضع Slowmode للروم |
+
+> 🔐 هذه الأوامر تحتاج صلاحيات Discord المناسبة.
+
+### 🧰 2. معلومات وأدوات
+
+| الأمر | ماذا يفعل؟ |
+|---|---|
+| !ping | 🏓 يعرض استجابة البوت |
+| !server | 🏠 يعرض معلومات السيرفر |
+| !userinfo | 👤 يعرض معلومات عضو |
+| !avatar | 🖼️ يعرض صورة الحساب |
+| !uptime | ⏱️ يعرض مدة تشغيل البوت |
+| !help | ❓ يعرض المساعدة |
+
+### 📢 3. أدوات التفاعل
+
+| الأمر | ماذا يفعل؟ |
+|---|---|
+| !say | 💬 يجعل البوت يرسل نصًا |
+| !announce | 📣 ينشئ إعلانًا |
+| !poll | 📊 ينشئ تصويتًا |
 
 ---
 
-## 📂 Project Structure
+## 🎮 مثال سريع
 
-```text
-Hhf/
-├── bot.py
-├── requirements.txt
-├── Procfile
-├── .env.example
-├── .gitignore
-└── README.md
-```
+إذا كتبت:
 
----
+    !ping
 
-## ⚡ Installation
+يرد البوت بشيء مثل:
 
-### 1. Clone the repository
+    🏓 Pong!
+    Latency: 45ms
 
-```bash
-git clone https://github.com/irisblack374-pixel/Hhf.git
-cd Hhf
-```
+ومثال آخر:
 
-### 2. Install dependencies
+    !userinfo @User
 
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure environment variables
-
-Create a `.env` file based on `.env.example`:
-
-```env
-DISCORD_TOKEN=YOUR_BOT_TOKEN
-PREFIX=!
-```
-
-### 4. Start the bot
-
-```bash
-python bot.py
-```
+يعرض معلومات العضو بدل البحث عنها يدويًا.
 
 ---
 
-## 🔑 Discord Configuration
+## 🧩 كيف يعمل Hhf؟
 
-Depending on the commands enabled in the bot, you may need to enable the required intents in the Discord Developer Portal.
-
-For member-related functionality, enable the corresponding **Server Members Intent**.  
-For message-content based commands, enable **Message Content Intent**.
-
----
-
-## 📋 Commands
-
-### 📌 General
-
-```text
-!help
-!ping
-!server
-!userinfo [@member]
-!avatar [@member]
-!uptime
-```
-
-### 🛡️ Moderation
-
-```text
-!clear <amount>
-!kick @member [reason]
-!ban @member [reason]
-!unban <ID>
-!lock
-!unlock
-!slowmode <seconds>
-```
-
-### 📢 Tools
-
-```text
-!say <message>
-!announce <message>
-!poll <question>
-```
-
-> Moderation commands require the appropriate Discord permissions.
+    👤 المستخدم
+         │
+         ▼
+    💬 يكتب الأمر
+         │
+         ▼
+    🤖 Hhf يستقبل الأمر
+         │
+         ▼
+    🧠 Python + discord.py
+         │
+         ▼
+    ⚡ تنفيذ العملية
+         │
+         ▼
+    💬 البوت يرسل النتيجة
 
 ---
 
-## 🔐 Security
+## 🧰 التقنيات المستخدمة
 
-**Never commit your real Discord bot token.**
-
-Use environment variables instead:
-
-```env
-DISCORD_TOKEN=YOUR_BOT_TOKEN
-```
-
-If a token is ever exposed, rotate it immediately through the Discord Developer Portal.
-
-GitHub also recommends using repository security features such as secret scanning, push protection, and Dependabot where appropriate.
+| التقنية | الاستخدام |
+|---|---|
+| 🐍 Python | لغة برمجة البوت |
+| 💬 discord.py | الاتصال بـ Discord |
+| 🔐 .env | حفظ الإعدادات السرية |
+| ☁️ Procfile | تشغيل البوت على بعض الاستضافات |
 
 ---
 
-## 🗺️ Roadmap
+## 📂 شكل المشروع
 
-- [ ] Expand moderation tools
-- [ ] Add more utility commands
-- [ ] Improve error handling
-- [ ] Add automated tests
-- [ ] Improve command documentation
-- [ ] Add richer configuration options
+    Hhf/
+    │
+    ├── 🤖 bot.py
+    │   └── الكود الرئيسي للبوت
+    │
+    ├── 📦 requirements.txt
+    │   └── المكتبات المطلوبة
+    │
+    ├── ☁️ Procfile
+    │   └── أمر تشغيل البوت للاستضافة
+    │
+    ├── 🔐 .env.example
+    │   └── مثال لإعدادات البيئة
+    │
+    ├── 🚫 .gitignore
+    │   └── ملفات لا يجب رفعها
+    │
+    └── 📖 README.md
+        └── شرح المشروع
 
 ---
 
-## 🤝 Contributing
+## 🚀 تشغيل المشروع
 
-Suggestions and improvements are welcome.
+### 💻 على الكمبيوتر
 
-Before submitting changes:
+**1️⃣ حمّل المشروع**
 
-1. Keep the existing command behavior in mind.
-2. Test the bot locally.
-3. Never include secrets or tokens.
-4. Keep documentation updated when commands change.
+    git clone https://github.com/irisblack374-pixel/Hhf.git
+    cd Hhf
+
+**2️⃣ ثبّت المكتبات**
+
+    pip install -r requirements.txt
+
+**3️⃣ أنشئ ملف .env**
+
+ضع داخله:
+
+    DISCORD_TOKEN=YOUR_BOT_TOKEN
+    PREFIX=!
+
+**4️⃣ شغّل البوت**
+
+    python bot.py
+
+إذا ظهر أن البوت متصل، يكون التشغيل ناجحًا. ✅
 
 ---
 
-## 📄 License
+## 🔑 إعداد Discord
 
-© 2026 Hhf.
+قبل تشغيل البوت، تحتاج إنشاء Bot من **Discord Developer Portal**.
 
-See the repository's license information before redistributing or using the project commercially.
+ثم فعّل الـIntents المطلوبة حسب الأوامر المستخدمة، خصوصًا:
+
+- 💬 **Message Content Intent**
+- 👥 **Server Members Intent** عند الحاجة
+
+ولا تضع التوكن الحقيقي داخل GitHub.
+
+---
+
+## 🔐 الأمان مهم جدًا
+
+❌ لا ترفع ملف .env.
+
+❌ لا تكتب التوكن داخل bot.py.
+
+✅ استخدم متغيرات البيئة:
+
+    DISCORD_TOKEN=YOUR_BOT_TOKEN
+
+إذا انكشف التوكن، قم بتغييره فورًا من Discord Developer Portal.
+
+---
+
+## 🗺️ التطوير القادم
+
+- [ ] 🛡️ إضافة أدوات Moderation أكثر
+- [ ] 🧰 إضافة Utilities جديدة
+- [ ] ⚠️ تحسين نظام الأخطاء
+- [ ] 🧪 إضافة اختبارات
+- [ ] 📖 توثيق الأوامر بشكل أكبر
+- [ ] ⚙️ إضافة إعدادات أكثر للسيرفر
+
+---
+
+## ⭐ لماذا Hhf؟
+
+لأن الهدف هو جعل الأدوات الأساسية للسيرفر **سهلة، واضحة، وفي مكان واحد**.
+
+    Discord Server
+          │
+          ▼
+       🤖 Hhf
+       ├── 🛡️ Moderation
+       ├── 🧰 Utilities
+       ├── 📢 Tools
+       └── ❓ Help
 
 ---
 
 <div align="center">
 
-### 🚀 Built with Python & discord.py
+### 🚀 Hhf
 
-**Hhf — simple tools for better Discord servers.**
+**Simple tools. Clear commands. One Discord bot.**
+
+⭐ إذا أعجبك المشروع، يمكنك استكشاف المستودع وتجربته.
 
 </div>

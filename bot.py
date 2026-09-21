@@ -11,6 +11,7 @@ import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from security import setup_security
+from protection import setup_protection
 
 load_dotenv()
 
@@ -46,6 +47,7 @@ bot = commands.Bot(
 @bot.event
 async def setup_hook():
     await setup_security(bot)
+    await setup_protection(bot)
 
 spam_cache = defaultdict(lambda: deque(maxlen=12))
 

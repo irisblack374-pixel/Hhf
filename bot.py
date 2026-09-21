@@ -10,6 +10,7 @@ from collections import defaultdict, deque
 import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
+from security import setup_security
 
 load_dotenv()
 
@@ -40,6 +41,11 @@ bot = commands.Bot(
     help_command=None,
     case_insensitive=True,
 )
+
+
+@bot.event
+async def setup_hook():
+    await setup_security(bot)
 
 spam_cache = defaultdict(lambda: deque(maxlen=12))
 

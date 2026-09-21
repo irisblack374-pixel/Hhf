@@ -1,42 +1,49 @@
 <div align="center">
 
-# 🤖 Hhf
+# 🐺 Hhf
 
-### Discord Management • Moderation • Protection • Tickets
+### Discord Management • Moderation • Protection
 
-A Python + discord.py Discord bot designed to bring useful server-management tools into one project.
+**Python + discord.py**
+
+A Discord bot project focused on server management, moderation, protection, tickets, logs, and utility tools.
+
+**CODE • CREATE • EVOLVE**
 
 </div>
 
 ---
 
-## ✨ Features
+## 🛡️ Features
 
-- 🛡️ Moderation tools
-- 🔐 AutoMod, Anti-Link, and Anti-Spam
-- 🎫 Ticket system with close button
-- 📋 Server logs
-- 👋 Welcome messages
-- 💡 Suggestions
-- ⚙️ Per-server configuration
-- 🧰 Utility and server-information commands
-- 📊 Server statistics
-- 🎛️ Interactive help menu
+- Moderation tools
+- AutoMod
+- Anti-Link
+- Anti-Spam
+- Protection tools
+- Ticket system
+- Server logs
+- Welcome messages
+- Suggestions
+- Server configuration
+- Utility commands
+- Server statistics
+- Interactive help menu
 
 ---
 
-## 🧩 Technology
+## ⚙️ Stack
 
-| Technology | Purpose |
+| Technology | Role |
 |---|---|
-| Python | Main programming language |
-| discord.py | Discord API library |
-| JSON | Local configuration and data |
+| Python | Main language |
+| discord.py | Discord API |
+| JSON | Local data/configuration |
 | python-dotenv | Environment variables |
 
 ---
 
-## 📁 Project Structure
+## 📁 Structure
 
 ```
 Hhf/
@@ -52,7 +59,7 @@ Hhf/
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Run
 
 ```bash
 git clone https://github.com/irisblack374-pixel/Hhf.git
@@ -61,34 +68,32 @@ pip install -r requirements.txt
 python bot.py
 ```
 
-Create a `.env` file and keep the bot token there:
+Create `.env`:
 
 ```env
 DISCORD_TOKEN=YOUR_BOT_TOKEN
 PREFIX=!
 ```
 
-**Never upload the real `.env` or bot token to GitHub.**
+> Never upload your real `.env` or bot token.
 
 ---
 
-## 🛡️ Security
+## 🔐 Protection
 
-Hhf includes configurable protection features such as:
+Hhf includes configurable protection and moderation functionality such as:
 
 - Anti-Spam
 - Anti-Link
 - AutoMod
 - Moderation logging
 
-Use the permissions and intents required by the commands you enable.
-
 ---
 
 ## 🗺️ Roadmap
 
 - [ ] Expand moderation tools
-- [ ] Improve configuration commands
+- [ ] Improve configuration
 - [ ] Add more protection modules
 - [ ] Add automated tests
 - [ ] Improve documentation
@@ -97,6 +102,8 @@ Use the permissions and intents required by the commands you enable.
 
 <div align="center">
 
-**Hhf — Manage your Discord server with one bot.**
+**🐺 Hhf**
+
+*Build. Test. Improve.*
 
 </div>

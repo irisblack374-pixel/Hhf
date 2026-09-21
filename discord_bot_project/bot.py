@@ -318,7 +318,6 @@ async def transfer_amount(ctx, amount: str):
         color=COLOR_CUSTOM_GREY
     )
     await ctx.send(embed=embed)
-    await ctx.send(transfer_text)
 
 @bot.command(name="تعال")
 async def call_member(ctx, member: discord.Member):

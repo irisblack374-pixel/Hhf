@@ -18,11 +18,10 @@ def _has_role(member, role_id):
         return False
     return any(role.id == int(role_id) for role in member.roles)
 
-def _configured_role_check(member, level):
-    if member.id == member.guild.owner_id:
+def _configured_role_check(member, settings, level):
+    if member.id == member.guild.owner_id or member.guild_permissions.administrator:
         return True
 
-    settings = member.guild._hhf_cfg if hasattr(member.guild, "_hhf_cfg") else {}
     admin_id = int(settings.get("admin_role", 0) or 0)
     mod_id = int(settings.get("moderator_role", 0) or 0)
 
@@ -57,22 +56,16 @@ async def role_permission_check(ctx):
     else:
         return True
 
-    # Read the current per-guild settings from the bot's config.
     cfg = getattr(ctx.bot, "cfg", None)
     if cfg is None:
         return True
 
     settings = cfg(ctx.guild)
-    ctx.guild._hhf_cfg = settings
-
-    if _configured_role_check(ctx.author, level):
+    if _configured_role_check(ctx.author, settings, level):
         return True
 
     raise RolePermissionError(level)
 
 async def setup_role_permissions(bot):
-    bot.cfg = getattr(bot, "cfg", None)
-    if bot.cfg is None:
-        return
     bot.add_check(role_permission_check)
     bot.RolePermissionError = RolePermissionError

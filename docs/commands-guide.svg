@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2100" viewBox="0 0 1400 2100">
+<rect width="1400" height="2100" fill="#0b0d12"/>
+<rect x="55" y="45" width="1290" height="105" rx="18" fill="#171a22" stroke="#2b3140"/>
+<text x="90" y="92" fill="#f4f7fb" font-family="Arial,sans-serif" font-size="30" font-weight="700">Hhf • Command Guide</text>
+<text x="90" y="126" fill="#9da7b8" font-family="Arial,sans-serif" font-size="17">شرح بصري مرتب: الأمر ← ماذا يفعل ← مثال على رد البوت</text>
+
+<g><rect x="70" y="190" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="95" y="228" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الأوامر العامة</text>
+<rect x="92" y="248" width="576" height="48" rx="10" fill="#202530"/>
+<text x="108" y="279" fill="#ffffff" font-family="monospace" font-size="19">!ping</text>
+<text x="95" y="330" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="95" y="357" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يفحص استجابة البوت</text>
+<rect x="92" y="380" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="108" y="413" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  🏓 Pong! 42ms</text></g><g><rect x="710" y="190" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="735" y="228" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الأوامر العامة</text>
+<rect x="732" y="248" width="576" height="48" rx="10" fill="#202530"/>
+<text x="748" y="279" fill="#ffffff" font-family="monospace" font-size="19">!userinfo @Member</text>
+<text x="735" y="330" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="735" y="357" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يعرض معلومات العضو</text>
+<rect x="732" y="380" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="748" y="413" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  👤 معلومات العضو: الاسم • ID • الأدوار</text></g><g><rect x="70" y="490" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="95" y="528" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الإدارة</text>
+<rect x="92" y="548" width="576" height="48" rx="10" fill="#202530"/>
+<text x="108" y="579" fill="#ffffff" font-family="monospace" font-size="19">!clear 10</text>
+<text x="95" y="630" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="95" y="657" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يحذف 10 رسائل</text>
+<rect x="92" y="680" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="108" y="713" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  🧹 تم حذف 10 رسائل</text></g><g><rect x="710" y="490" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="735" y="528" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الإدارة</text>
+<rect x="732" y="548" width="576" height="48" rx="10" fill="#202530"/>
+<text x="748" y="579" fill="#ffffff" font-family="monospace" font-size="19">!warn @Member spam</text>
+<text x="735" y="630" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="735" y="657" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يسجل تحذيرًا للعضو</text>
+<rect x="732" y="680" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="748" y="713" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  ⚠️ تم تحذير العضو • السبب: spam</text></g><g><rect x="70" y="790" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="95" y="828" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الإدارة</text>
+<rect x="92" y="848" width="576" height="48" rx="10" fill="#202530"/>
+<text x="108" y="879" fill="#ffffff" font-family="monospace" font-size="19">!timeout @Member 10</text>
+<text x="95" y="930" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="95" y="957" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يقيّد العضو لمدة 10 دقائق</text>
+<rect x="92" y="980" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="108" y="1013" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  ⏱️ تم إعطاء Timeout لمدة 10 دقائق</text></g><g><rect x="710" y="790" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="735" y="828" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الحماية</text>
+<rect x="732" y="848" width="576" height="48" rx="10" fill="#202530"/>
+<text x="748" y="879" fill="#ffffff" font-family="monospace" font-size="19">!automod on</text>
+<text x="735" y="930" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="735" y="957" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يفعّل AutoMod</text>
+<rect x="732" y="980" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="748" y="1013" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  🛡️ تم تفعيل AutoMod</text></g><g><rect x="70" y="1090" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="95" y="1128" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الحماية</text>
+<rect x="92" y="1148" width="576" height="48" rx="10" fill="#202530"/>
+<text x="108" y="1179" fill="#ffffff" font-family="monospace" font-size="19">!lockdown</text>
+<text x="95" y="1230" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="95" y="1257" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يفعّل الإغلاق الأمني</text>
+<rect x="92" y="1280" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="108" y="1313" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  🔒 تم تفعيل الإغلاق الأمني</text></g><g><rect x="710" y="1090" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="735" y="1128" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الإعدادات</text>
+<rect x="732" y="1148" width="576" height="48" rx="10" fill="#202530"/>
+<text x="748" y="1179" fill="#ffffff" font-family="monospace" font-size="19">!setlog #logs</text>
+<text x="735" y="1230" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="735" y="1257" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يحدد روم السجلات</text>
+<rect x="732" y="1280" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="748" y="1313" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  ⚙️ تم تعيين روم السجلات: #logs</text></g><g><rect x="70" y="1390" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="95" y="1428" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الصلاحيات</text>
+<rect x="92" y="1448" width="576" height="48" rx="10" fill="#202530"/>
+<text x="108" y="1479" fill="#ffffff" font-family="monospace" font-size="19">!setadminrole @Admin</text>
+<text x="95" y="1530" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="95" y="1557" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يحدد رتبة الإدارة</text>
+<rect x="92" y="1580" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="108" y="1613" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  👑 تم تعيين رتبة Admin</text></g><g><rect x="710" y="1390" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="735" y="1428" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">التذاكر</text>
+<rect x="732" y="1448" width="576" height="48" rx="10" fill="#202530"/>
+<text x="748" y="1479" fill="#ffffff" font-family="monospace" font-size="19">!ticket</text>
+<text x="735" y="1530" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="735" y="1557" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">ينشئ لوحة/تذكرة الدعم</text>
+<rect x="732" y="1580" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="748" y="1613" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  🎫 تم إنشاء التذكرة بنجاح</text></g><g><rect x="70" y="1690" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="95" y="1728" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الأدوات</text>
+<rect x="92" y="1748" width="576" height="48" rx="10" fill="#202530"/>
+<text x="108" y="1779" fill="#ffffff" font-family="monospace" font-size="19">!poll هل نفتح الحدث؟</text>
+<text x="95" y="1830" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="95" y="1857" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">ينشئ تصويتًا</text>
+<rect x="92" y="1880" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="108" y="1913" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  📊 هل نفتح الحدث؟  👍 / 👎</text></g><g><rect x="710" y="1690" width="620" height="265" rx="18" fill="#141820" stroke="#303746"/>
+<text x="735" y="1728" fill="#8fa7ff" font-family="Arial,sans-serif" font-size="15" font-weight="700">الاقتصاد</text>
+<rect x="732" y="1748" width="576" height="48" rx="10" fill="#202530"/>
+<text x="748" y="1779" fill="#ffffff" font-family="monospace" font-size="19">!daily</text>
+<text x="735" y="1830" fill="#d9dee8" font-family="Arial,sans-serif" font-size="17" font-weight="700">ماذا يفعل؟</text>
+<text x="735" y="1857" fill="#aeb7c7" font-family="Arial,sans-serif" font-size="16">يستلم مكافأة اليوم</text>
+<rect x="732" y="1880" width="576" height="54" rx="10" fill="#0e1117"/>
+<text x="748" y="1913" fill="#8ee6b0" font-family="Arial,sans-serif" font-size="15">Hhf  •  💰 تمت إضافة مكافأة اليوم إلى رصيدك</text></g>
+<text x="70" y="2010" fill="#707b8d" font-family="Arial,sans-serif" font-size="15">ملاحظة: الأمثلة توضيحية لشكل التفاعل وليست لقطات شاشة فعلية من Discord.</text>
+</svg>

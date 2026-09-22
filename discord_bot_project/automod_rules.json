@@ -1,0 +1,39 @@
+{
+    "rules": {
+        "0": {
+            "id": 0,
+            "keywords": [
+                "نيترو",
+                "nitro",
+                "فيزا",
+                "visa",
+                "ماستر كارد",
+                "mastercard",
+                "بطاقة",
+                "تحويل",
+                "دفع",
+                "ادفع",
+                "شراء",
+                "اشتري",
+                "سعر",
+                "فلوس",
+                "مبلغ",
+                "paypal",
+                "بايبال",
+                "stc",
+                "راجحي",
+                "فودافون",
+                "usdt",
+                "binance",
+                "روبكس",
+                "robux",
+                "boost",
+                "بوست"
+            ],
+            "type": "substring",
+            "action": "delete",
+            "duration": null
+        }
+    },
+    "exempt_roles": []
+}

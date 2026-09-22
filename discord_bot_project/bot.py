@@ -8,6 +8,7 @@ import asyncio
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+from automod import register as register_automod
 
 # تحميل المتغيرات من ملف .env
 load_dotenv()
@@ -96,6 +97,7 @@ class CustomBot(commands.Bot):
         super().__init__(command_prefix="-", intents=intents)
 
 bot = CustomBot()
+automod = register_automod(bot)
 
 def parse_amount(text: str):
     text = text.strip().lower()
@@ -372,6 +374,10 @@ async def on_message(message: discord.Message):
         return
 
     content_lower = message.content.lower()
+
+    # AutoMod منقول ومتكيف من discord-math/bot
+    if await automod.scan(message):
+        return
 
     # 1️⃣ نظام حماية روابط السيرفرات (Anti-Discord Invite)
     if DISCORD_INVITE_PATTERN.search(message.content):

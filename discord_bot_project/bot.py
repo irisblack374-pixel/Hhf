@@ -365,10 +365,19 @@ async def call_member(ctx, member: discord.Member):
 # ==========================================
 @bot.event
 async def on_message(message: discord.Message):
-    # إهمال البوتات الأخرى والإداريين لمنحهم الحرية
-    if message.author.bot or message.author.guild_permissions.administrator:
-        if not message.author.bot:
-            await bot.process_commands(message)
+    # تجاهل رسائل البوتات تماماً لمنع الحلقات، مع إبقاء أوامر البوت خارج أي فلترة تلقائية.
+    if message.author.bot:
+        return
+
+    # أوامر البوت تبدأ بـ "-" حسب إعداد command_prefix.
+    # يتم تمريرها مباشرة إلى نظام الأوامر حتى لا يؤثر AutoMod عليها.
+    command_prefix = bot.command_prefix
+    if isinstance(command_prefix, str) and message.content.startswith(command_prefix):
+        await bot.process_commands(message)
+        return
+
+    # الإداريون مستثنون من الفلترة التلقائية، مع إبقاء بقية معالجة الرسالة كما هي.
+    if message.author.guild_permissions.administrator:
         return
 
     content_lower = message.content.lower()
